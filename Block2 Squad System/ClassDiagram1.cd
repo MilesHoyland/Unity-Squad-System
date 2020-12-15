@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ring" Collapsed="true">
+    <Position X="13.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Ring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RingSector" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\RingSector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RingNode" Collapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\RingNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RingMenuMono" Collapsed="true">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAEAAAACAAAABAAAACAAAAAACAAgAAAAAQEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\RingMenuMono.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlyCamScript" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQACwAAAACACAAAgABABAAAgAAAAgAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\FlyCamScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
