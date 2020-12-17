@@ -63,6 +63,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AI\AttackEnemy.cs" />
+    <Compile Include="Assets\AI\BakeBread.cs" />
+    <Compile Include="Assets\AI\DeliverBread.cs" />
+    <Compile Include="Assets\AI\FSM\FSM.cs" />
+    <Compile Include="Assets\AI\FSM\FSMState.cs" />
+    <Compile Include="Assets\AI\GOAP\GoapAction.cs" />
+    <Compile Include="Assets\AI\GOAP\GoapAgent.cs" />
+    <Compile Include="Assets\AI\GOAP\GoapPlanner.cs" />
+    <Compile Include="Assets\AI\GOAP\IGoap.cs" />
+    <Compile Include="Assets\AI\Inventory.cs" />
+    <Compile Include="Assets\AI\PickupFlour.cs" />
+    <Compile Include="Assets\AI\Worker.cs" />
+    <Compile Include="Assets\PingScript.cs" />
+    <Compile Include="Assets\PointToPlayer.cs" />
     <Compile Include="Assets\Scripts\AimContext.cs" />
     <Compile Include="Assets\Scripts\Debugging\DebugRayTracer.cs" />
     <Compile Include="Assets\Scripts\Debugging\Navigation.cs" />
@@ -84,45 +98,46 @@
     <Compile Include="Assets\Scripts\UI\RingMenuMono.cs" />
     <Compile Include="Assets\Scripts\UI\RingNode.cs" />
     <Compile Include="Assets\Scripts\UI\RingSector.cs" />
+    <Compile Include="Assets\SystemManager.cs" />
     <None Include="Assets\Scripts\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/HorrorRepo/Block2 Squad System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

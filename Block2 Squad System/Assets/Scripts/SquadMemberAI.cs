@@ -4,25 +4,18 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-//[RequireComponent(typeof(Collider))]
 
 public class SquadMemberAI : MonoBehaviour
 {
     //For now we'll just make a fsm for the different behaviour
     public NavMeshAgent nav_agent;
-    public Collider collider;
+    Vector3 previousDestination;
 
+    public bool seeEnemy;
+    
     private void Start()
     {
-        collider = this.GetComponent<Collider>();
-        if(collider)
-        {
-            Debug.Log("Collider Initialized.");
-        }
-        if(!collider)
-        {
-            Debug.Log("ERROR: Did not initialize collider.");
-        }
+
         nav_agent = this.GetComponent<NavMeshAgent>();
         if (!nav_agent)
             Debug.LogError("Navmesh Agent not found.");

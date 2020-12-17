@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SquadAIDebugger : MonoBehaviour
 {
-    SquadMemberAI squadMember;
     Color red = Color.red;
     Color green = Color.green;
     Color blue = Color.blue;
@@ -28,12 +27,6 @@ public class SquadAIDebugger : MonoBehaviour
 
     void Start()
     {
-        squadMember = this.GetComponent<SquadMemberAI>();
-        if(!squadMember)
-        {
-            Debug.Log("Squad member AI script not found.");
-        }
-
     }
 
 
@@ -47,7 +40,7 @@ public class SquadAIDebugger : MonoBehaviour
         {
             allAgents = FindObjectsOfType<SquadMemberAI>();
         }
-        foreach (var allAgents in allAgents)
+        foreach (var agent in allAgents)
         {
             //string persTxt = allAgents.returnDebugData;
             string text = allAgents.ToString();

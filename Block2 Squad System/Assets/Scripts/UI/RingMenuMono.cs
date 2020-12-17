@@ -50,7 +50,8 @@ public class RingMenuMono : MonoBehaviour
     void Update()
     {
         var stepLength = 360f / data.nodes.Length;
-        var mouseAngle = NormalizeAngle(Vector3.SignedAngle(Vector3.up, Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2), Vector3.forward) + stepLength / 2f);
+        //        new Vector3(Screen.width / 2, Screen.height / 2)
+        var mouseAngle = NormalizeAngle(Vector3.SignedAngle(Vector3.up, Input.mousePosition - transform.position, Vector3.forward) + stepLength / 2f);
         if (Input.GetMouseButtonDown(0))
             Debug.Log("Click registered at angle: "+ mouseAngle);
 
