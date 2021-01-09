@@ -63,24 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AI\AttackEnemy.cs" />
-    <Compile Include="Assets\AI\BakeBread.cs" />
-    <Compile Include="Assets\AI\DeliverBread.cs" />
-    <Compile Include="Assets\AI\FSM\FSM.cs" />
-    <Compile Include="Assets\AI\FSM\FSMState.cs" />
-    <Compile Include="Assets\AI\GOAP\GoapAction.cs" />
-    <Compile Include="Assets\AI\GOAP\GoapAgent.cs" />
-    <Compile Include="Assets\AI\GOAP\GoapPlanner.cs" />
-    <Compile Include="Assets\AI\GOAP\IGoap.cs" />
-    <Compile Include="Assets\AI\Inventory.cs" />
-    <Compile Include="Assets\AI\PickupFlour.cs" />
-    <Compile Include="Assets\AI\Worker.cs" />
-    <Compile Include="Assets\PingScript.cs" />
-    <Compile Include="Assets\PointToPlayer.cs" />
+    <Compile Include="Assets\EnemyAI.cs" />
+    <Compile Include="Assets\FormationData.cs" />
+    <Compile Include="Assets\FormationManager.cs" />
+    <Compile Include="Assets\FPSController.cs" />
     <Compile Include="Assets\Scripts\AimContext.cs" />
+    <Compile Include="Assets\Scripts\CommandManager.cs" />
     <Compile Include="Assets\Scripts\Debugging\DebugRayTracer.cs" />
-    <Compile Include="Assets\Scripts\Debugging\Navigation.cs" />
     <Compile Include="Assets\Scripts\Debugging\SquadAIDebugger.cs" />
+    <Compile Include="Assets\Scripts\Debugging\SquadDirector.cs" />
     <Compile Include="Assets\Scripts\DestroyScript.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\MouseLook.cs" />
@@ -90,15 +81,19 @@
     <Compile Include="Assets\Scripts\GizmoExample.cs" />
     <Compile Include="Assets\Scripts\GizmosEditor.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
+    <Compile Include="Assets\Scripts\PingScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PointToPlayer.cs" />
     <Compile Include="Assets\Scripts\Squad.cs" />
-    <Compile Include="Assets\Scripts\SquadController.cs" />
+    <Compile Include="Assets\Scripts\SquadManager.cs" />
     <Compile Include="Assets\Scripts\SquadMemberAI.cs" />
+    <Compile Include="Assets\Scripts\SystemManager.cs" />
     <Compile Include="Assets\Scripts\UI\Ring.cs" />
     <Compile Include="Assets\Scripts\UI\RingMenuMono.cs" />
     <Compile Include="Assets\Scripts\UI\RingNode.cs" />
     <Compile Include="Assets\Scripts\UI\RingSector.cs" />
-    <Compile Include="Assets\SystemManager.cs" />
+    <Compile Include="Assets\Scripts\WorldIntelligence.cs" />
+    <Compile Include="Assets\SquadiePawn.cs" />
     <None Include="Assets\Scripts\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

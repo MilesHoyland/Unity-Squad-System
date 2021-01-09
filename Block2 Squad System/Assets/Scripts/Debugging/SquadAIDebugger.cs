@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class SquadAIDebugger : MonoBehaviour
 {
-    Color red = Color.red;
-    Color green = Color.green;
-    Color blue = Color.blue;
+    public float lineScalar = 1.5f;
 
     public bool drawLocals = true;
     public bool drawLineOfSight = true;
-    //public bool
 
     //HeightOffset is the offset above a char
     [SerializeField]
     private Vector3 heightOffset = Vector3.up;
 
+    Color red = Color.red;
+    Color green = Color.green;
+    Color blue = Color.blue;
+
     //cache the character brains
-    private SquadMemberAI[] allAgents;
+    private SquadMemberAI[] squadAgents;
 
     [SerializeField]
     private Color color = Color.green;
@@ -36,18 +37,29 @@ public class SquadAIDebugger : MonoBehaviour
     {
         style.normal.textColor = color;
 
-        if (allAgents == null)
+        if (squadAgents == null)
         {
-            allAgents = FindObjectsOfType<SquadMemberAI>();
+            squadAgents = FindObjectsOfType<SquadMemberAI>();
         }
-        foreach (var agent in allAgents)
+
+        foreach (var agent in squadAgents)
         {
             //string persTxt = allAgents.returnDebugData;
-            string text = allAgents.ToString();
-            //UnityEditor.Handles.Label(allAgents.transform.position + heightOffset, text);
+            string text = agent.ToString() + "\n";
+            UnityEditor.Handles.Label(agent.transform.position + heightOffset, text);
+
+
+            //Local Axis Debug
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(agent.transform.position, agent.transform.position + agent.transform.up * lineScalar);
+
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(agent.transform.position, agent.transform.position + agent.transform.forward * lineScalar);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(agent.transform.position, agent.transform.position + agent.transform.right * lineScalar);
+
         }
-
-
 
     }
 }

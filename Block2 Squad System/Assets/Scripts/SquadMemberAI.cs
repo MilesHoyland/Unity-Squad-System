@@ -8,8 +8,22 @@ using UnityEngine.AI;
 public class SquadMemberAI : MonoBehaviour
 {
     //For now we'll just make a fsm for the different behaviour
+    [SerializeField] new string name;
     public NavMeshAgent nav_agent;
     Vector3 previousDestination;
+
+    [SerializeField] Vector3 desiredFollowPoint = Vector3.zero;
+    [SerializeField] float followStoppingDist = 1.0f;
+
+    private State currentState = State.NULL;
+
+    enum State 
+    { 
+        NULL = 0,
+        FOLLOW = 1,
+        FIGHT = 2
+    }
+
 
     public bool seeEnemy;
     
@@ -27,7 +41,14 @@ public class SquadMemberAI : MonoBehaviour
 
     private void Update()
     {
-        
+        if(currentState == State.FOLLOW)
+        {
+            
+        }
+        if(currentState == State.FIGHT)
+        {
+
+        }
     }
 
 
@@ -99,5 +120,10 @@ public class SquadMemberAI : MonoBehaviour
         }
         result = Vector3.zero;
         return false;
+    }
+
+    public override string ToString()
+    {
+        return currentState.ToString();
     }
 }

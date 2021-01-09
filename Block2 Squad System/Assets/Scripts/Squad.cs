@@ -9,22 +9,43 @@ using UnityEngine.AI;
 public class Squad : MonoBehaviour
 {
     public SquadMemberAI[] squad;
-    public Navigation navigation;
+    public SquadDirector navigation;
+    public List<Vector3> squadFormation;
+
 
     private void Start()
     {
         //Initializing the squad
+        bool needResolve = false;
+
+        SquadMemberAI[] memberAIs = this.gameObject.GetComponentsInChildren<SquadMemberAI>();
+
+        squad = memberAIs;
+
         foreach (SquadMemberAI sm in squad)
         {
-            GameObject go = sm.GetComponent<GameObject>();
-            if(go)
-            { 
-                //Place on a random location on the navmesh
-                go.gameObject.transform.Translate(navigation.GetPointInSphere(gameObject.transform.position , 5f, 30));
-            
+            GameObject go = sm.gameObject;
+            Collider smCollider = go.GetComponent<Collider>();
+            foreach (SquadMemberAI fellow_sm in squad)
+            {
+                if(fellow_sm == sm )
+                {
+                    break;
+                }
+                GameObject fellow_go = fellow_sm.gameObject;
+                Collider fellowCollider = fellow_go.GetComponent<Collider>();
+                if (fellowCollider.bounds.Contains(smCollider.transform.position))
+                {
+                    needResolve = true;
+                    break;
+                }
             }
         }
-        ResolveSquad();
+
+        if(needResolve)
+        {
+            ResolveSquad();
+        }
     }
 
     public void ResolveSquad()

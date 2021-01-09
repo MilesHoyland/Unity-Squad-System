@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DebugRayTracer : MonoBehaviour
 {
-    private Navigation navigation;
+    private SquadDirector navigation;
     private GameObject gameObject;
     public float line_scalar = 5f;
     public Color color = Color.white;
