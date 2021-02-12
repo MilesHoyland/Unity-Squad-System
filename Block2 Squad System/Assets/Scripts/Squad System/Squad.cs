@@ -8,11 +8,12 @@ using UnityEngine.AI;
 //I imagine this would be similar to the blackboard in a behaviour tree.
 public class Squad : MonoBehaviour
 {
-    public SquadMemberAI[] squad;
-    public SquadDirector navigation;
-    public List<Vector3> squadFormation;
+    [SerializeField] SquadMemberAI[] m_squad;
+    [SerializeField] SquadController m_controller;
 
+    public SquadMemberAI[] Squadies { get { return m_squad; } }
 
+    //TODO: Refactor this code to be executed by the squad director instead of on the start
     private void Start()
     {
         //Initializing the squad
@@ -20,13 +21,13 @@ public class Squad : MonoBehaviour
 
         SquadMemberAI[] memberAIs = this.gameObject.GetComponentsInChildren<SquadMemberAI>();
 
-        squad = memberAIs;
+        m_squad = memberAIs;
 
-        foreach (SquadMemberAI sm in squad)
+        foreach (SquadMemberAI sm in m_squad)
         {
             GameObject go = sm.gameObject;
             Collider smCollider = go.GetComponent<Collider>();
-            foreach (SquadMemberAI fellow_sm in squad)
+            foreach (SquadMemberAI fellow_sm in m_squad)
             {
                 if(fellow_sm == sm )
                 {
@@ -52,17 +53,17 @@ public class Squad : MonoBehaviour
     {
         int maxIterators = 30;
 
-        foreach(SquadMemberAI sm in squad)
+        foreach(SquadMemberAI sm in m_squad)
         {
             Collider smCollider = sm.GetComponent<Collider>();
             
-            foreach (SquadMemberAI fellow_sm in squad)
+            foreach (SquadMemberAI fellow_sm in m_squad)
             {
                 Collider fellowCollider = fellow_sm.GetComponent<Collider>();
                 //Place on a random location on the navmesh
                 if (fellowCollider.bounds.Contains(sm.transform.position)) 
                 {
-                    sm.gameObject.transform.Translate(navigation.GetPointInSphere(gameObject.transform.position, 5f, maxIterators));
+                    sm.gameObject.transform.Translate(m_controller.GetPointInSphere(gameObject.transform.position, 5f, maxIterators));
                 }
             }
         }
@@ -80,5 +81,6 @@ public class Squad : MonoBehaviour
     {
         
     }
+
 
 }

@@ -7,7 +7,16 @@ public class SystemManager : MonoBehaviour
 
     #region Systems
     [SerializeField] SquadManager squadManager;
-   // [SerializeField] PlayerMovement fpcScript;
+    FPSController fpcScript = null;
+
+    [Header("Systems")]
+    SquadManager squad_manager;
+    CommandManager command_manager;
+    WorldIntelligence world_intelligence;
+    SquadController squad_controller;
+    SquadAIDebugger squad_ai_debugging;
+    FormationManager formation_manager;
+
     #endregion
 
     #region Public Members
@@ -17,8 +26,7 @@ public class SystemManager : MonoBehaviour
     #endregion
 
     #region Private Members
-    [SerializeField] bool isFlyCam = true;
-    [SerializeField] ControlMode controlMode = ControlMode.FlyCam;
+    [SerializeField] ControlMode controlMode = ControlMode.FPS;
 
     enum ControlMode
     {
@@ -31,17 +39,13 @@ public class SystemManager : MonoBehaviour
     #region Main Methods
     void Start()
     {
+
         if (player)
         {
- //           fpcScript = player.GetComponent<PlayerMovement>();
-  //          if (!fpcScript)
- //           {
-  //             Debug.LogError("Referenced player does not own a FPC Script.");
-   //         }
-         //   else
-   //         {
-//Debug.Log("Player properly initialised.");
-  //          }
+            if (!fpcScript)
+            {
+                fpcScript = player.GetComponent<FPSController>();
+            }
         }
         else
         {
@@ -60,7 +64,7 @@ public class SystemManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (controlMode.Equals(ControlMode.FPS))
@@ -78,19 +82,21 @@ public class SystemManager : MonoBehaviour
     #region UtilityMethods
     private void ToggleControlMode()
     {
-        if (isFlyCam)
+        if ((ControlMode)controlMode == ControlMode.FlyCam)
         {
-            flyCam.SetActive(false);
-            player.SetActive(true);
-            isFlyCam = false;
+            //Debug.Log("Control mode changes to FPS.");
+            player.gameObject.SetActive(true);
+            flyCam.gameObject.SetActive(false);
             controlMode = ControlMode.FPS;
+            return;
         }
-        if (!isFlyCam)
+        if ((ControlMode)controlMode == ControlMode.FPS)
         {
-            player.SetActive(false);
+            //Debug.Log("Control mode changes to Flycam.");
             flyCam.SetActive(true);
-            isFlyCam = true;
+            player.SetActive(false);
             controlMode = ControlMode.FlyCam;
+            return;
         }
     }
     #endregion

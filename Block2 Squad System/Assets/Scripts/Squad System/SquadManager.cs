@@ -11,12 +11,11 @@ public class SquadManager : MonoBehaviour
 
     #region Subsystems
     [SerializeField] CommandManager m_commandManager; 
-    [SerializeField] SquadDirector m_squadDirector;
+    [SerializeField] SquadController m_squadController;
     [SerializeField] WorldIntelligence m_worldIntelligence;
     #endregion
 
     #region Private Members
-    [SerializeField] FormationManager m_formationManager;
     [SerializeField] Squad m_squad;
 
 
@@ -25,9 +24,8 @@ public class SquadManager : MonoBehaviour
     #endregion
 
     #region Properties
-    public FormationManager FormationManager { get { return m_formationManager; } }
     public Squad Squad { get { return m_squad; } }
-    public SquadDirector SquadDirector { get { return m_squadDirector; } }
+    public SquadController SquadController { get { return m_squadController; } }
     public WorldIntelligence WorldIntelligence { get { return m_worldIntelligence; } }
 
     #endregion
@@ -38,24 +36,20 @@ public class SquadManager : MonoBehaviour
         //TODO change to get from squad system script
         if(m_squad)
         {
-            m_smates = new GameObject[m_squad.squad.Length];
-            for(int i = 0; i < m_squad.squad.Length; i++)
+            m_smates = new GameObject[m_squad.Squadies.Length];
+            for(int i = 0; i < m_squad.Squadies.Length; i++)
             {
-                m_smates[i] = m_squad.squad[i].gameObject;
-                Debug.Log("Squad mate: " + m_squad.squad[i].name + " was added to the squad controller.");
+                m_smates[i] = m_squad.Squadies[i].gameObject;
+                Debug.Log("Squad mate: " + m_squad.Squadies[i].name + " was added to the squad controller.");
             }
         }
         if (!m_squad)
         {
             Debug.LogError("Squad instance not properly linked.");
         }
-        if(!m_squadDirector)
+        if(!m_squadController)
         {
             Debug.LogError("Navigation not properly referenced.");
-        }
-        if(!m_formationManager)
-        {
-            Debug.LogError("Formation manager not properly referenced.");
         }
         if(!system)
         {
@@ -73,7 +67,7 @@ public class SquadManager : MonoBehaviour
                 m_commandManager.Manager = this;
             }
         }
-
+        m_squadController.Manager = this;
     }
 
     void Update()

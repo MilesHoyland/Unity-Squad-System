@@ -45,7 +45,18 @@ public class SquadAIDebugger : MonoBehaviour
         foreach (var agent in squadAgents)
         {
             //string persTxt = allAgents.returnDebugData;
-            string text = agent.ToString() + "\n";
+            SquadState state = agent.State;
+            string text = "Null";
+            if(state == SquadState.FOLLOW)
+            {
+                text = "FOLLOW\n";
+            }
+            else if(state == SquadState.FIGHT)
+            {
+                text = "FIGHT\n";
+            }
+            else { }
+
             UnityEditor.Handles.Label(agent.transform.position + heightOffset, text);
 
 

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum CommandState
+{
+    HOLDING = 1,
+    PUSHING,
+    GOINGTO,
+    REGROUPING
+}
 
 public class CommandManager : MonoBehaviour
 {
@@ -27,38 +34,26 @@ public class CommandManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
-            {
-                Instantiate(m_targetIndicator, hitInfo.point, m_targetIndicator.transform.rotation);
-                foreach (SquadMemberAI sm in m_squadManager.Squad.squad)
-                {
-                    //TODO implement navmesh control
-                    if (sm.nav_agent)
-                    {
-                        Vector3 point = m_squadManager.SquadDirector.GetPointInSphere(hitInfo.point, 5f, 10);
-                        sm.nav_agent.SetDestination(point);
-                    }
-
-                }
-            }
+            GoToLocation();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Execute Squad Command: Go to Location");
+           // Debug.Log("Execute Squad Command: Go to Location");
+
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Execute Squad Command: Regroup");
+           Debug.Log("Execute Squad Command: Regroup");
+            Regroup();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Debug.Log("Execute Squad Command: Hold position");
+            HoldPoint();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
@@ -88,23 +83,44 @@ public class CommandManager : MonoBehaviour
     #region Utility Methods
     private void Regroup()
     {
-        foreach (SquadMemberAI sm in m_squadManager.Squad.squad)
+        foreach (SquadMemberAI sm in m_squadManager.Squad.Squadies)
         {
-            //Change state in SquadMemberAI to Regroup
+            if (sm.Agent)
+            {
+                sm.HasCommand = false;
+            }
         }
     }
 
     private void GoToLocation()
     {
-        foreach (SquadMemberAI sm in m_squadManager.Squad.squad)
+        RaycastHit hitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
         {
-            //Change state in SquadMemberAI to Regroup
+            Instantiate(m_targetIndicator, hitInfo.point, m_targetIndicator.transform.rotation);
+
+            foreach (SquadMemberAI sm in m_squadManager.Squad.Squadies)
+            {
+                //TODO implement navmesh control
+                if (sm.Agent)
+                {
+                    Vector3 point = m_squadManager.SquadController.GetPointInSphere(hitInfo.point, 5f, 10);
+                    sm.Agent.SetDestination(point);
+                    sm.HasCommand = true;
+                }
+
+            }
         }
     }
 
     private void HoldPoint()
     {
-
+        foreach(SquadMemberAI sm in m_squadManager.Squad.Squadies)
+        {
+            sm.HasCommand = true;
+            sm.Agent.ResetPath();
+        }
     }
 
     private void Push()

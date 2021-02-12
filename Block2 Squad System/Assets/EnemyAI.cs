@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int health = 100;
 
-    // Update is called once per frame
+    public bool IsDead { get { if (health > 0) return false; else return true; } }
+    
+    public void TakeDamage()
+    {
+        health -= 10;
+    }
+   
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

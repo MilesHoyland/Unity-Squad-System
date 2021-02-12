@@ -68,10 +68,9 @@
     <Compile Include="Assets\FormationManager.cs" />
     <Compile Include="Assets\FPSController.cs" />
     <Compile Include="Assets\Scripts\AimContext.cs" />
-    <Compile Include="Assets\Scripts\CommandManager.cs" />
     <Compile Include="Assets\Scripts\Debugging\DebugRayTracer.cs" />
     <Compile Include="Assets\Scripts\Debugging\SquadAIDebugger.cs" />
-    <Compile Include="Assets\Scripts\Debugging\SquadDirector.cs" />
+    <Compile Include="Assets\Scripts\Debugging\SquadController.cs" />
     <Compile Include="Assets\Scripts\DestroyScript.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\MouseLook.cs" />
@@ -84,16 +83,18 @@
     <Compile Include="Assets\Scripts\PingScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PointToPlayer.cs" />
-    <Compile Include="Assets\Scripts\Squad.cs" />
-    <Compile Include="Assets\Scripts\SquadManager.cs" />
-    <Compile Include="Assets\Scripts\SquadMemberAI.cs" />
-    <Compile Include="Assets\Scripts\SystemManager.cs" />
+    <Compile Include="Assets\Scripts\Squad System\CommandManager.cs" />
+    <Compile Include="Assets\Scripts\Squad System\Squad.cs" />
+    <Compile Include="Assets\Scripts\Squad System\SquadManager.cs" />
+    <Compile Include="Assets\Scripts\Squad System\SquadMemberAI.cs" />
+    <Compile Include="Assets\Scripts\Squad System\SystemManager.cs" />
+    <Compile Include="Assets\Scripts\Squad System\WorldIntelligence.cs" />
     <Compile Include="Assets\Scripts\UI\Ring.cs" />
     <Compile Include="Assets\Scripts\UI\RingMenuMono.cs" />
     <Compile Include="Assets\Scripts\UI\RingNode.cs" />
     <Compile Include="Assets\Scripts\UI\RingSector.cs" />
-    <Compile Include="Assets\Scripts\WorldIntelligence.cs" />
     <Compile Include="Assets\SquadiePawn.cs" />
+    <Compile Include="Assets\TestUI.cs" />
     <None Include="Assets\Scripts\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

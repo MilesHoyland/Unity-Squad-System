@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SquadManager" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAUAAQCIAAACAAAAAAAACAAAAAAAAACAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\SquadManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SquadMemberAI" Collapsed="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQEIEAAACEABQAEAAECABAEAAAGFQAQASBAIACAAAA=</HashCode>
+      <FileName>Assets\Scripts\SquadMemberAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemManager" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAVAAAAIACAAAAAAAAAgAAAAAAEAAAABAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\SystemManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldIntelligence" Collapsed="true">
+    <Position X="1.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgABQAACAAAABAAAAEAAAAAAAAAAAgAAAAACEAEAA=</HashCode>
+      <FileName>Assets\Scripts\WorldIntelligence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Squad" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAACACgAIAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Squad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommandManager" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgCAAAACABAAAQAAAAAAAAAAAABAAAAAAAAASACAA=</HashCode>
+      <FileName>Assets\Scripts\CommandManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormationManager" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAACAgAAACAAgAAAAAAAAAAAAAIAAIAAAAAAA=</HashCode>
+      <FileName>Assets\FormationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FPSController" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAggACAQAAEAAAQAMAgAQIAACAAAAQQAAKAAQAA=</HashCode>
+      <FileName>Assets\FPSController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingScript" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PingScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseController" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEREIAAGACAAAQBAAAAAAAAAAAAAACABAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\MouseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement" Collapsed="true">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAYAAggAAAAAAQEAAAAAAAAACAAAAQAIAASAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormationData" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\FormationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SquadiePawn" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SquadiePawn.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

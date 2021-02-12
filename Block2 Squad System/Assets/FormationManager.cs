@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
-
 public class FormationManager : MonoBehaviour
 {
     public Squad squad;
@@ -14,6 +10,9 @@ public class FormationManager : MonoBehaviour
     public Transform fOrigin;
 
     public FormationData formationData;
+
+    [SerializeField] string formationName;
+    
 
     void Start()
     {
@@ -33,7 +32,7 @@ public class FormationManager : MonoBehaviour
         {
             // create a squadie piece for each squad member in squad
             fSquadies = new List<SquadiePawn>();
-            foreach(var s in squad.squad)
+            foreach(var s in squad.Squadies)
             {
                 fSquadies.Add(new SquadiePawn(s, fSquadiePrefab));
             }

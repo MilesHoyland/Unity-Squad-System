@@ -42,7 +42,7 @@ public class RingMenuMono : MonoBehaviour
             //set icon
             ringSectors[i].icon.transform.localPosition = ringSectors[i].sectorPiece.transform.localPosition
                 + Quaternion.AngleAxis(i * stepLength, Vector3.forward) * Vector3.up * iconDist;
-
+            ringSectors[i].icon.sprite = data.nodes[i].icon;
         }
     }
 
