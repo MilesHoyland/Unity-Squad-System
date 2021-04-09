@@ -63,77 +63,97 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BulletProjectile.cs" />
     <Compile Include="Assets\EnemyAI.cs" />
+    <Compile Include="Assets\Files To Delete\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Files To Delete\FirstPersonCharacter\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Files To Delete\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\Files To Delete\GizmoExample.cs" />
+    <Compile Include="Assets\Files To Delete\GizmosEditor.cs" />
     <Compile Include="Assets\FormationData.cs" />
     <Compile Include="Assets\FormationManager.cs" />
     <Compile Include="Assets\FPSController.cs" />
+    <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\Projectile.cs" />
     <Compile Include="Assets\Scripts\AimContext.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\CommandManager.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\Squad.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\SquadController.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\SquadManager.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\SquadMemberAI.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\SystemManager.cs" />
+    <Compile Include="Assets\Scripts\Core Squad System\WorldIntelligence.cs" />
     <Compile Include="Assets\Scripts\Debugging\DebugRayTracer.cs" />
+    <Compile Include="Assets\Scripts\Debugging\FPCDebugger.cs" />
     <Compile Include="Assets\Scripts\Debugging\SquadAIDebugger.cs" />
-    <Compile Include="Assets\Scripts\Debugging\SquadController.cs" />
     <Compile Include="Assets\Scripts\DestroyScript.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\FlyCamScript.cs" />
-    <Compile Include="Assets\Scripts\FPCDebugger.cs" />
-    <Compile Include="Assets\Scripts\GizmoExample.cs" />
-    <Compile Include="Assets\Scripts\GizmosEditor.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
     <Compile Include="Assets\Scripts\PingScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PointToPlayer.cs" />
-    <Compile Include="Assets\Scripts\Squad System\CommandManager.cs" />
-    <Compile Include="Assets\Scripts\Squad System\Squad.cs" />
-    <Compile Include="Assets\Scripts\Squad System\SquadManager.cs" />
-    <Compile Include="Assets\Scripts\Squad System\SquadMemberAI.cs" />
-    <Compile Include="Assets\Scripts\Squad System\SystemManager.cs" />
-    <Compile Include="Assets\Scripts\Squad System\WorldIntelligence.cs" />
     <Compile Include="Assets\Scripts\UI\Ring.cs" />
     <Compile Include="Assets\Scripts\UI\RingMenuMono.cs" />
     <Compile Include="Assets\Scripts\UI\RingNode.cs" />
     <Compile Include="Assets\Scripts\UI\RingSector.cs" />
     <Compile Include="Assets\SquadiePawn.cs" />
-    <Compile Include="Assets\TestUI.cs" />
-    <None Include="Assets\Scripts\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <Compile Include="Assets\SystemUI.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Files To Delete\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/miles/Desktop/ChiliTuts/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/miles/Documents/University Term 3/AT/Block2 AT/Block2 Squad System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
